@@ -1,17 +1,25 @@
 {{! This is the post loop - each post will be output using this markup }}
+<div class="container-fluid">
+<div class="row">
+
 {{#foreach posts}}
-<article>
-    <header class="post-header">
-        <h2 class="post-title"><a href="{{url}}" title="{{{title}}}">{{{title}}}</a></h2>
-<p class="post-meta">
-    {{author}} on <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMMM YYYY"}}</time> {{tags prefix=" in "}}
-</p>
-    </header>
-    <section class="post-excerpt">
-        <p>{{excerpt words="80"}} <a class="read-more" href="{{url}}">&raquo;</a></p>
-    </section>
-</article>
+        <div class="col-md-4">
+        <article>
+            <header class="post-header">
+                <h2 class="post-title"><a href="{{url}}" title="{{{title}}}">{{{title}}}</a></h2>
+                <p class="post-meta">
+                    {{author}} on <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMMM YYYY"}}</time> {{tags prefix=" in "}}
+                </p>
+            </header>
+            <section class="post-excerpt">
+                <p>{{excerpt words="80"}} <a class="read-more" href="{{url}}">&raquo;</a></p>
+            </section>
+        </article>
+    </div>
+
 {{/foreach}}
+    </div>
+    </div>
 
 {{! Previous/next page links - displayed on every page }}
 {{pagination}}
