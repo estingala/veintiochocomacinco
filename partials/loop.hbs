@@ -3,18 +3,11 @@
 <div class="row">
 
 {{#foreach posts}}
-        <div class="col-md-4 blog_post_item" style="background-image: url({{image}}); background-size: cover; filter: blur(100px);">
-        <article>
-            <header class="post-header">
-                <h2 class="post-title"><a href="{{url}}" title="{{{title}}}">{{{title}}}</a></h2>
-                <p class="post-meta">
-                    {{author}} on <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMMM YYYY"}}</time> {{tags prefix=" in "}}
-                </p>
-            </header>
-            <section class="post-excerpt">
-                <p>{{excerpt words="36"}} <a class="read-more" href="{{url}}">&raquo;</a></p>
-            </section>
-        </article>
+        <div class="col-md-4">
+            <img src="{{image}}" class="img-responsive blog_post_item_bg"/>
+            <div class="blog_post_item_content">
+                <div class="blog_post_item_content_title">{{title}}</div>
+            </div>
     </div>
 
 {{/foreach}}
