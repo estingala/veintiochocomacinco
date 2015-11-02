@@ -4,12 +4,12 @@
   -o-filter: blur(5px);
   -ms-filter: blur(5px);
   filter: blur(5px);
-  transition: .5s; }
-  .blog_post_item:hover {
+  transition:.5s;
+  &:hover {
     -webkit-filter: blur(0px);
     -moz-filter: blur(0px);
     -o-filter: blur(0px);
     -ms-filter: blur(0px);
-    filter: blur(0px); }
-
-/*# sourceMappingURL=general.css.map */
+    filter: blur(0px);
+  }
+}
