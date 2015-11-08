@@ -56,3 +56,21 @@
   -ms-transform: translateX(-50%); /* for IE9 */
   transform: translateX(-50%);
 }
+
+.post-gallery {
+  width: 100%;
+  float: left;
+}
+.post-gallery img {
+  width: 100%;
+  height: auto;
+}
+.post-gallery figure {
+  display: block;
+  float: left;
+  margin: 0 5px 5px 0;
+  width: 150px;
+}
+.post-gallery figcaption {
+  display: none;
+}
