@@ -37,8 +37,32 @@
   color: white;
 }
 
+.post-header {
+
+}
+
+.header-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 80px;
+  background-repeat:no-repeat;
+  background-size:cover;
+  -webkit-filter: blur(10px) brightness(2);
+  -moz-filter: blur(10px) brightness(2);
+  -o-filter: blur(10px) brightness(2);
+  -ms-filter: blur(10px) brightness(2);
+  filter: blur(10px) brightness(2);
+  -ms-transform: scale(1.5,1.5); /* IE 9 */
+  -webkit-transform: scale(1.5,1.5); /* Chrome, Safari, Opera */
+  transform: scale(1.5,1.5);
+}
 .post-content {
   font-family: Lato, sans-serif;
+  font-size: medium;
+  text-align: justify;
 }
 
 .post-content img {
