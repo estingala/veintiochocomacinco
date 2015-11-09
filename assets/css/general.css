@@ -32,6 +32,16 @@
   background-color: red;
   color: white; }
 
+.post-header {
+  font-family: Lato sans-serif;
+  position: relative;
+  top: 20px;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 80px;
+  color: gray; }
+
 .header-bg {
   position: absolute;
   top: 0;
@@ -41,11 +51,11 @@
   height: 80px;
   background-repeat: no-repeat;
   background-size: cover;
-  -webkit-filter: blur(10px) brightness(2);
-  -moz-filter: blur(10px) brightness(2);
-  -o-filter: blur(10px) brightness(2);
-  -ms-filter: blur(10px) brightness(2);
-  filter: blur(10px) brightness(2);
+  -webkit-filter: blur(10px) brightness(3);
+  -moz-filter: blur(10px) brightness(3);
+  -o-filter: blur(10px) brightness(3);
+  -ms-filter: blur(10px) brightness(3);
+  filter: blur(10px) brightness(3);
   -ms-transform: scale(1.5, 1.5);
   /* IE 9 */
   -webkit-transform: scale(1.5, 1.5);
