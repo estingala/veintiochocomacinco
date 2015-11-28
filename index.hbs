@@ -4,22 +4,30 @@
     {{#foreach posts}}
         {{#if image}}
         <a class="top-main-gallery-item" href={{url}}>
-            <div class="top-main-gallery-item-photo" style="background-image: url({{image}})"></div>
-        <div class="blog_post_item_content">
-            <div class="blog_post_item_content_title"><a href={{url}} title="{{title}}">{{title}}</a></div>
-        </div>
+            <div class="top-main-gallery-item-photo" style="background-image: url({{image}})">
+
+            </div>
         </a>
         {{/if}}
     {{/foreach}}
-<img src="{{@blog.cover}}" class="img-responsive"/>
 </div>
 
 <div class="grid" role="document">
-    <div class="row center-block gray-backgrounded">
-        <div class="col-xs-12 col-sm-8 col-md-12 col-lg-12">
-            <main id="content" class="content" role="main">
-             {{> "loop"}}
-            </main>
-        </div>
+    <div class="center-block gray-backgrounded">
+        {{#foreach posts columns=2}}
+            {{#if @rowStart}}
+                <div class="row gray-backgrounded">
+            {{/if}}
+            <div class="col-md-4 col-sm-10 col-lg-4 {{#if @rowStart}}col-md-offset-1{{/if}}">
+                <img src="{{image}}" class="img-responsive blog_post_item_bg"/>
+                <div class="blog_post_item_content">
+                    <div class="blog_post_item_content_title"><a href={{url}} title="{{title}}">{{title}}</a></div>
+                </div>
+            </div>
+            {{#if @rowEnd}}
+                </div>
+            {{/if}}
+        {{/foreach}}
+        {{pagination}}
     </div>
-</div>
+</main>
