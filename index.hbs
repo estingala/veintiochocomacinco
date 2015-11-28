@@ -1,21 +1,25 @@
 {{!< default}}
 {{! The tag above means - insert everything in this file into the {body} of the default.hbs template }}
-<div class="container">
-    <img src="{{@blog.cover}}" class="img-responsive"/>
+<div class="top-main-gallery">
+    {{#foreach posts}}
+        {{#if image}}
+        <a class="top-main-gallery-item" href={{url}}>
+            <div class="top-main-gallery-item-photo" style="background-image: url({{image}})">HEHEHEHE</div>
+        <div class="blog_post_item_content">
+            <div class="blog_post_item_content_title"><a href={{url}} title="{{title}}">{{title}}</a></div>
+        </div>
+        </a>
+        {{/if}}
+    {{/foreach}}
+<img src="{{@blog.cover}}" class="img-responsive"/>
 </div>
 
-<div class="container" role="document">
-
-<div class="row center-block">
-  <div class="col-xs-12 col-sm-8 col-md-12 col-lg-12">
-
-{{! The main content area on the homepage }}
-<main id="content" class="content" role="main">
-
-    {{! The tag below includes the post loop - partials/loop.hbs }}
-    {{> "loop"}}
-
-</main>
-
-  </div>
+<div class="grid" role="document">
+    <div class="row center-block gray-backgrounded">
+        <div class="col-xs-12 col-sm-8 col-md-12 col-lg-12">
+            <main id="content" class="content" role="main">
+             {{> "loop"}}
+            </main>
+        </div>
+    </div>
 </div>
