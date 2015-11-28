@@ -80,6 +80,9 @@ hr {
     display: block;
     overflow: hidden; }
 
+.grid-item {
+  padding-bottom: 20px; }
+
 .gray-backgrounded {
   background-color: #fafafa;
   padding-top: 30px; }
