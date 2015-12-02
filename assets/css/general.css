@@ -98,6 +98,14 @@ hr {
   display: block;
   position: relative;
   overflow: hidden; }
+  .top-main-gallery-item span {
+    background-color: #d58512;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    z-index: 300; }
 
 .top-main-gallery-item-photo {
   background-size: cover;
