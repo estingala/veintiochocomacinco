@@ -3,6 +3,8 @@
  */
 $(document).ready(function(){
     $('.top-main-gallery').slick({
+        dots: true,
+        arrows: true,
         infinite: true,
         slidesToShow: 1,
         slidesToScroll: 1,
