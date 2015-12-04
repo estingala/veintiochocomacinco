@@ -98,14 +98,17 @@ hr {
   display: block;
   position: relative;
   overflow: hidden; }
-  .top-main-gallery-item span {
+  .top-main-gallery-item a {
     background-color: #d58512;
     position: absolute;
-    bottom: 20px;
-    left: 20px;
+    bottom: 10vh;
+    left: 10vw;
     margin-left: 20px;
     margin-right: 20px;
     z-index: 300; }
+
+nav img {
+  height: 50px; }
 
 .top-main-gallery-item-photo {
   background-size: cover;
