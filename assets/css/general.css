@@ -111,8 +111,18 @@ hr {
     margin-right: 20px;
     z-index: 300; }
 
-nav img {
-  height: 50px; }
+.navbar-large .navbar-header {
+  min-height: 150px; }
+  .navbar-large .navbar-header img {
+    height: 100px; }
+
+.navbar-small .navbar-header {
+  min-height: 50px; }
+  .navbar-small .navbar-header img {
+    height: 25px; }
+
+.navbar-header {
+  min-height: 150px; }
 
 .top-main-gallery-item-photo {
   background-size: cover;

@@ -137,9 +137,28 @@ hr {
 }
 
 nav {
-  img {
-    height: 50px;
+
+}
+
+.navbar-large {
+  .navbar-header {
+    min-height: 150px;
+    img {
+      height: 100px;
+    }
   }
+}
+.navbar-small {
+  .navbar-header {
+    min-height: 50px;
+    img {
+      height: 25px;
+    }
+  }
+}
+
+.navbar-header {
+  min-height: 150px;
 }
 
 .top-main-gallery-item-photo {
