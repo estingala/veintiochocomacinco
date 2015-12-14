@@ -77,7 +77,7 @@ nav {
   .navbar-small .navbar-header {
     -webkit-transition: all 1s ease;
     transition: all 1s ease;
-    min-height: 50px; }
+    min-height: 70px; }
     .navbar-small .navbar-header img {
       -webkit-transition: all 1s ease;
       transition: all 1s ease;
@@ -85,12 +85,12 @@ nav {
 
 .img-logo-letters {
   position: absolute;
-  top: 0px;
+  top: 20px;
   left: 0px; }
 
 .img-logo-shoe {
   position: absolute;
-  top: 0px;
+  top: 20px;
   left: 0px; }
 
 .navbar-header {
