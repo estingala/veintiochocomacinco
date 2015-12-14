@@ -144,23 +144,39 @@
 }
 
 nav {
-  transition: 1s;
+
+  navbar {
+    -webkit-transition: all 1s ease;
+    transition: all 1s ease;
+  }
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
 }
 
 .navbar-large {
-  transition: 1s;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
   .navbar-header {
+    -webkit-transition: all 1s ease;
+    transition: all 1s ease;
     min-height: 150px;
     img {
+      -webkit-transition: all 1s ease;
+      transition: all 1s ease;
       height: 100px;
     }
   }
 }
 .navbar-small {
-  transition: 1s;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
   .navbar-header {
+    -webkit-transition: all 1s ease;
+    transition: all 1s ease;
     min-height: 50px;
     img {
+      -webkit-transition: all 1s ease;
+      transition: all 1s ease;
       height: 25px;
     }
   }
