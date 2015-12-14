@@ -28,9 +28,17 @@ window.addEventListener('scroll', function() {
     //console.log(frames.top.scrollY)
     //console.log($('body').scrollTop())
     if (window.scrollY > 100) {
+        //$("#img_logo_shoe").fadeOut('slow');
+        ////$("#img_logo_letters").show();
+        ////$("#img_logo_shoe").opacity = 0;
+        $("#img_logo_shoe").css({ opacity: 0.0 });
         $('nav').removeClass('navbar-large');
         $('nav').addClass('navbar-small');
     } else {
+        $("#img_logo_shoe").css({ opacity: 1.0 });
+        //$("#img_logo_shoe").fadeIn("slow");
+        ////$("#img_logo_letters").hide();
+        //$("#img_logo_shoe").opacity = 1;
         $('nav').addClass('navbar-large');
         $('nav').removeClass('navbar-small');
     }

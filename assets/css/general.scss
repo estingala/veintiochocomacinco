@@ -144,10 +144,13 @@
 }
 
 nav {
-
-  navbar {
+  .navbar {
+    background-color: blue;
     -webkit-transition: all 1s ease;
     transition: all 1s ease;
+  }
+  .navbar-default {
+    background-color: green;
   }
   -webkit-transition: all 1s ease;
   transition: all 1s ease;
@@ -167,6 +170,7 @@ nav {
     }
   }
 }
+
 .navbar-small {
   -webkit-transition: all 1s ease;
   transition: all 1s ease;
@@ -177,11 +181,24 @@ nav {
     img {
       -webkit-transition: all 1s ease;
       transition: all 1s ease;
-      height: 25px;
+      height: 100px;
     }
   }
 }
 
+.img-logo-letters {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  //opacity: 0.5;
+}
+
+.img-logo-shoe {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  //opacity: 0.5;
+}
 .navbar-header {
   min-height: 150px;
 }
@@ -277,4 +294,61 @@ nav {
 
 .post-gallery figcaption {
   display: none;
+}
+
+
+
+// bootstrap custom things
+
+
+$bgDefault      : rgba(0,0,0,0.5);
+$bgHighlight    : rgba(0,0,0,1);
+$colDefault     : #ecf0f1;
+$colHighlight       : #ffbbbc;
+.navbar-default {
+  background-color: $bgDefault;
+  border-color: $bgHighlight;
+  .navbar-brand {
+    color: $colDefault;
+    &:hover, &:focus {
+      color: $colHighlight; }}
+  .navbar-text {
+    color: $colDefault; }
+  .navbar-nav {
+    > li {
+      > a {
+        color: $colDefault;
+        &:hover,  &:focus {
+          color: $colHighlight; }}}
+    > .active {
+      > a, > a:hover, > a:focus {
+        color: $colHighlight;
+        background-color: $bgHighlight; }}
+    > .open {
+      > a, > a:hover, > a:focus {
+        color: $colHighlight;
+        background-color: $bgHighlight; }}}
+  .navbar-toggle {
+    border-color: $bgHighlight;
+    &:hover, &:focus {
+      background-color: $bgHighlight; }
+    .icon-bar {
+      background-color: $colDefault; }}
+  .navbar-collapse,
+  .navbar-form {
+    border-color: $colDefault; }
+  .navbar-link {
+    color: $colDefault;
+    &:hover {
+      color: $colHighlight; }}}
+@media (max-width: 767px) {
+  .navbar-default .navbar-nav .open .dropdown-menu {
+    > li > a {
+      color: $colDefault;
+      &:hover, &:focus {
+        color: $colHighlight; }}
+    > .active {
+      > a, > a:hover, > a:focus, {
+        color: $colHighlight;
+        background-color: $bgHighlight; }}}
 }
