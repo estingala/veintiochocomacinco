@@ -13,8 +13,21 @@ $(document).ready(function(){
         autoplaySpeed: 4000
     });
 });
-$('body').scroll(function() {
-    if ($('body').scrollTop() > 50) {
+
+window.addEventListener('scroll', function() {
+    //var l = $('*').length;
+    //for(var i = 0; i < l; i++) {
+    //    var elem = $('*:eq(' + i + ')');
+    //    if(elem.scrollTop() > 0) {
+    //        console.log(elem, elem.scrollTop());
+    //    }
+    //}
+
+
+
+    //console.log(frames.top.scrollY)
+    //console.log($('body').scrollTop())
+    if (window.scrollY > 100) {
         $('nav').removeClass('navbar-large');
         $('nav').addClass('navbar-small');
     } else {
@@ -22,3 +35,25 @@ $('body').scroll(function() {
         $('nav').removeClass('navbar-small');
     }
 });
+
+$(document).ready(function(){
+    // cache the window object
+    $window = $(window);
+
+    $('section[data-type="gallery"]').each(function(){
+        // declare the variable to affect the defined data-type
+        var $scroll = $(this);
+
+        $(window).scroll(function() {
+            // HTML5 proves useful for helping with creating JS functions!
+            // also, negative value because we're scrolling upwards
+            var yPos = ($window.scrollTop() / $scroll.data('speed'));
+
+            // background position
+            var coords = yPos + 'px';
+
+            // move the background
+            $scroll.css({ top: coords });
+        }); // end window scroll
+    });  // end section function
+}); // close out script

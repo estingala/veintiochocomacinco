@@ -1,7 +1,6 @@
 {{!< default}}
 {{! The tag above means - insert everything in this file into the {body} of the default.hbs template }}
-
-<div class="top-main-gallery">
+<section class="top-main-gallery" data-type="gallery" data-speed="4">
     {{#foreach posts}}
         {{#if image}}
         <div class="top-main-gallery-item" href={{url}}>
@@ -14,7 +13,7 @@
         </div>
         {{/if}}
     {{/foreach}}
-</div>
+</section>
 <nav class="navbar navbar-default navbar-fixed-top navbar-large">
     <div class="container-fluid">
         <div class="navbar-header">
@@ -24,7 +23,7 @@
         </div>
     </div>
 </nav>
-<div class="grid" role="document">
+<section class="grid" role="document">
     <div class="center-block gray-backgrounded">
         {{#foreach posts columns=2}}
             {{#if @rowStart}}
@@ -43,4 +42,4 @@
         {{/foreach}}
         {{pagination}}
     </div>
-</main>
+</section>
