@@ -1,3 +1,10 @@
+body {
+  font-family: Lato, sans-serif; }
+
+a {
+  color: #303030 !important;
+  text-decoration: none !important; }
+
 .top-main-gallery {
   position: relative;
   top: -100;
@@ -16,6 +23,7 @@
   background-color: white;
   position: absolute;
   top: 100vh;
+  width: 100%;
   z-index: 10; }
   .grid:after {
     display: block;
@@ -27,12 +35,27 @@
   overflow: hidden;
   margin-bottom: 40px; }
   .grid-item a {
-    text-decoration: none; }
+    text-decoration: none;
+    height: 200px; }
     .grid-item a:link, .grid-item a:hover, .grid-item a:visited, .grid-item a:active {
       text-decoration: none; }
 
+.post-image {
+  display: block;
+  width: 100%;
+  overflow: hidden; }
+
+.post-image-content {
+  overflow: hidden;
+  width: 100%;
+  padding-bottom: 100%;
+  transition: all .4s ease-in-out;
+  background-size: cover; }
+  .post-image-content:hover {
+    transform: scale(1.2); }
+
 .gray-backgrounded {
-  background-color: #fafafa;
+  background-color: #F7F7F7;
   padding-top: 30px;
   z-index: 2; }
 
@@ -41,12 +64,12 @@
   position: relative;
   overflow: hidden; }
   .top-main-gallery-item a {
-    background-color: #d58512;
+    background-color: #FFFFFF;
     position: absolute;
     bottom: 10vh;
     left: 10vw;
-    margin-left: 20px;
-    margin-right: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
     z-index: 300; }
 
 nav {
