@@ -177,14 +177,14 @@ nav {
     filter: saturate(10); }
 
 .post-header {
-  font-family: Lato sans-serif;
-  position: relative;
-  top: 20px;
+  font-family: "Fjalla One", sans-serif;
+  text-transform: uppercase;
+  position: absolute;
   left: 0;
-  bottom: 0;
-  right: 0;
-  height: 80px;
-  color: gray; }
+  bottom: 20px;
+  right: 0px;
+  color: black;
+  text-align: center; }
 
 .header-bg {
   position: absolute;
@@ -236,6 +236,13 @@ nav {
   background-color: rgba(0, 0, 0, 0.4);
   color: white; }
 
+.post-main-img {
+  position: relative;
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+  z-index: -1; }
+
 .post-gallery {
   width: 100%;
   float: left; }
@@ -252,6 +259,10 @@ nav {
 
 .post-gallery figcaption {
   display: none; }
+
+.white-bg {
+  background-color: #FFFFFF;
+  z-index: 3000; }
 
 .navbar-default {
   background-color: rgba(0, 0, 0, 0.5);

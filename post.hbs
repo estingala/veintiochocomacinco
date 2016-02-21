@@ -6,19 +6,15 @@
 {{! Everything inside the #post tags pulls data from the post }}
 {{#post}}
 
-<div class="jumbotron">
+<section class="post-main-img" style="background-image: url({{image}})" data-type="post-main-title" data-speed="4">
+    <div class="post-header"><h1>{{title}}</h1></div>
+</section>
 
-    <div class="container">
-        <div class="header-bg" style="background-image: url({{image}})"></div>
-        <div class="post-header"><h1>{{title}}</h1></div>
-    </div>
-</div>
-
-<div class="container" role="document">
-
+<div class="center-block post-center-block" role="document">
+<div class="center-block post-center-block">
 <div class="row">
-<div class="col-xs-12 col-sm-8 col-md-8 col-lg-8 col-md-offset-2 col-lg-offset-2 col-sm-offset-2">
-<main class="content" role="main">
+<div class="col-xs-10 col-sm-8 col-md-8 col-lg-8 col-xs-offset-1 col-md-offset-2 col-lg-offset-2 col-sm-offset-2">
+<main class="content white-bg" role="main">
 
     <article class="{{post_class}}">
 
@@ -96,6 +92,7 @@
 
 </main>
   </div>
+</div>
 </div>
         <script src={{asset "js/photoswipe-post.js"}}></script>
 {{/post}}

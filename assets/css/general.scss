@@ -3,6 +3,7 @@ $highlight-color: #000000;
 $highlight-bg-color: #FFFFFF;
 $inv-highlight-bg-color: rgba(0,0,0,0.4);
 $inv-text-color: white;
+$text-color: black;
 $latto: Lato, sans-serif;
 $fjalla: 'Fjalla One', sans-serif;
 $navbar-large-size: 150px;
@@ -323,14 +324,14 @@ nav {
 }
 
 .post-header {
-  font-family: Lato sans-serif;
-  position: relative;
-  top: 20px;
+  font-family: $fjalla;
+  text-transform: uppercase;
+  position: absolute;
   left: 0;
-  bottom: 0;
-  right: 0;
-  height: 80px;
-  color: gray;
+  bottom: 20px;
+  right: 0px;
+  color: $text-color;
+  text-align: center;
 }
 
 .header-bg {
@@ -386,6 +387,14 @@ nav {
   color: $inv-text-color;
 }
 
+.post-main-img {
+  position: relative;
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+  z-index: -1;
+}
+
 .post-gallery {
   width: 100%;
   float: left;
@@ -405,6 +414,11 @@ nav {
   display: none;
 }
 
+
+.white-bg {
+  background-color: $bg-color;
+  z-index: 3000;
+}
 
 
 // bootstrap custom things
