@@ -1,7 +1,11 @@
 $bg-color: #FFFFFF;
-$highlight-color: #303030;
+$highlight-color: #000000;
 $highlight-bg-color: #FFFFFF;
+$inv-highlight-bg-color: rgba(0,0,0,0.4);
+$inv-text-color: white;
 $latto: Lato, sans-serif;
+$navbar-large-size: 150px;
+$navbar-small-size: 70px;
 
 body {
   font-family: $latto;
@@ -58,10 +62,22 @@ a {
   position: relative;
   top: -100;
   left: 0;
-  width: 100%;
-  height: 100vh;
+  padding-left: 0px;
+  padding-right: 0px;
+  //width: 100%;
+  height: 90vh;
   z-index: 0;
   text-align: center;
+  border-style: solid;
+  border-color: $highlight-color;
+  border-width: 2vh;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.header-block {
+  height: 9vh;
 }
 
 //@media (pointer:fine) {
@@ -114,6 +130,9 @@ a {
   top: 100vh;
   width: 100%;
   z-index: 10;
+  //-webkit-box-shadow: 0 0 5px 5px $highlight-color;
+  //-moz-box-shadow: 0px -15px 20px $highlight-color;
+  transition: all .4s ease-in-out;
   &:after{
     //clear: both;
     //content: "";
@@ -122,14 +141,18 @@ a {
   }
 }
 
+.shadowed {
+  box-shadow: 0 0 40px 15px $highlight-color;
+}
+
 .grid-item {
   padding-bottom: 20px;
   position: relative;
   overflow: hidden;
-  margin-bottom: 40px;
+  margin-bottom: 0px;
   a {
     text-decoration: none;
-    height: 200px;
+    height: 100px;
     &:link, &:hover, &:visited, &:active {
       text-decoration: none;
     }
@@ -141,6 +164,11 @@ a {
 @media (min-width: 768px) {
   .col-333 {
     width: 27.777777775%;
+  }
+}
+@media (min-width: 1200px) {
+  .col-222 {
+    width: 22.222222222%;
   }
 }
 
@@ -157,15 +185,26 @@ a {
   overflow: hidden;
 
   width: 100%;
-  padding-bottom: 100%;
+  padding-bottom: 60%;
   transition: all .4s ease-in-out;
   &:hover {
     transform: scale(1.2);
   }
   background-size: cover;
+  border-style: solid;
+  border-color: $highlight-color;
+  border-width: 1vh;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-.gray-backgrounded {
+.gallery-center-block {
+  background-color: $bg-color;
+  padding-top: 1vh;
+  z-index: 2;
+}
+.post-center-block {
   background-color: $bg-color;
   padding-top: 30px;
   z-index: 2;
@@ -175,13 +214,17 @@ a {
   display: block;
   position: relative;
   overflow: hidden;
+  //height: 90vh;
   a {
-    background-color: $highlight-bg-color;
+    background-color: $inv-highlight-bg-color;
+    color: $inv-text-color !important;
     position: absolute;
-    bottom: 10vh;
-    left: 10vw;
-    padding-left: 10px;
-    padding-right: 10px;
+    bottom: 20vh;
+    left: 20vw;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
     z-index: 300;
   }
 }
@@ -205,7 +248,7 @@ nav {
   .navbar-header {
     -webkit-transition: all 1s ease;
     transition: all 1s ease;
-    min-height: 150px;
+    min-height: $navbar-large-size;
     img {
       -webkit-transition: all 1s ease;
       transition: all 1s ease;
@@ -220,7 +263,7 @@ nav {
   .navbar-header {
     -webkit-transition: all 1s ease;
     transition: all 1s ease;
-    min-height: 70px;
+    min-height: $navbar-small-size;
     img {
       -webkit-transition: all 1s ease;
       transition: all 1s ease;
@@ -236,12 +279,17 @@ nav {
   //opacity: 0.5;
 }
 
-.img-logo-shoe {
-  position: absolute;
-  top: 20px;
-  left: 0px;
-  //opacity: 0.5;
+.logo-frontpage {
+  height: 7vh;
+  padding-top: 4vh;
 }
+
+//.img-logo-shoe {
+//  position: absolute;
+//  top: 20px;
+//  left: 0px;
+//  //opacity: 0.5;
+//}
 .navbar-header {
   min-height: 150px;
 }
@@ -252,7 +300,7 @@ nav {
   &:after {
     display: block;
     content: "";
-    padding-bottom: 100vh;
+    padding-bottom: 86vh;
   }
 }
 
@@ -317,7 +365,14 @@ nav {
 }
 
 .post-item-title {
-  padding-top: 20px;
+  position: absolute;
+  text-align: center;
+  padding: 10px 10px 20px 10px;
+  left: 15px;
+  right: 15px;
+  bottom: 10px;
+  background-color: $inv-highlight-bg-color;
+  color: $inv-text-color;
 }
 
 .post-gallery {
