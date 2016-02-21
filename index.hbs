@@ -26,11 +26,9 @@
 </nav>
 <section class="grid" role="document">
     <div class="center-block gray-backgrounded">
-        {{#foreach posts columns=2}}
-            {{#if @rowStart}}
-                <div class="row">
-            {{/if}}
-            <div class="grid-item col-md-4 col-sm-4 col-lg-4 col-xs-12 {{#if @rowStart}}col-md-offset-1 col-lg-offset-1 col-sm-offset-1 col-xs-offset-0{{/if}}">
+        <div class="row">
+        {{#foreach posts from="1" to="2"}}
+            <div class="grid-item col-xs-10 col-sm-5 col-md-5 col-lg-4 col-xs-offset-1 {{#if @first}} col-sm-offset-1 col-md-offset-1 col-lg-offset-2 {{else}} col-sm-offset-0 col-md-offset-0 col-lg-offset-0 {{/if}}">
                 <a href="{{url}}">
                     <div class="post-image">
                         <div class="post-image-content" style="background-image: url({{image}})"></div>
@@ -38,12 +36,22 @@
                     <!--<img src="{{image}}" class="img-responsive"/>-->
                     <div class="post-item-title h4">{{title}}</div>
                 </a>
-
             </div>
-            {{#if @rowEnd}}
-                </div>
-            {{/if}}
         {{/foreach}}
+        </div>
+        <div class="row">
+            {{#foreach posts from="3" to="5"}}
+                <div class="grid-item col-xs-10 col-333 col-sm-3 col-md-3 col-lg-3 col-xs-offset-1 {{#if @first}} col-sm-offset-1 col-md-offset-1 col-lg-offset-2 {{else}} col-sm-offset-0 col-md-offset-0 col-lg-offset-0 {{/if}}">
+                    <a href="{{url}}">
+                        <div class="post-image">
+                            <div class="post-image-content" style="background-image: url({{image}})"></div>
+                        </div>
+                        <!--<img src="{{image}}" class="img-responsive"/>-->
+                        <div class="post-item-title h4">{{title}}</div>
+                    </a>
+                </div>
+            {{/foreach}}
+        </div>
         {{pagination}}
     </div>
 </section>

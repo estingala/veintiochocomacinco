@@ -1,4 +1,4 @@
-$bg-color: #F7F7F7;
+$bg-color: #FFFFFF;
 $highlight-color: #303030;
 $highlight-bg-color: #FFFFFF;
 $latto: Lato, sans-serif;
@@ -137,6 +137,14 @@ a {
   }
 
 }
+
+@media (min-width: 768px) {
+  .col-333 {
+    width: 27.777777775%;
+  }
+}
+
+
 
 .post-image {
   display: block;
