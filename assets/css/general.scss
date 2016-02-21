@@ -4,6 +4,7 @@ $highlight-bg-color: #FFFFFF;
 $inv-highlight-bg-color: rgba(0,0,0,0.4);
 $inv-text-color: white;
 $latto: Lato, sans-serif;
+$fjalla: 'Fjalla One', sans-serif;
 $navbar-large-size: 150px;
 $navbar-small-size: 70px;
 
@@ -186,9 +187,13 @@ a {
 
   width: 100%;
   padding-bottom: 60%;
-  transition: all .4s ease-in-out;
+  transition: all .2s ease-in-out;
+  filter: grayscale(50%);
+  -webkit-filter: grayscale(50%); /* Webkit */
+
   &:hover {
-    transform: scale(1.2);
+    filter: grayscale(0%);
+    -webkit-filter: grayscale(0%); /* Webkit */
   }
   background-size: cover;
   border-style: solid;
@@ -216,11 +221,15 @@ a {
   overflow: hidden;
   //height: 90vh;
   a {
+    font-family: $fjalla;
+    text-transform: uppercase;
     background-color: $inv-highlight-bg-color;
     color: $inv-text-color !important;
     position: absolute;
     bottom: 20vh;
-    left: 20vw;
+    left: 20vh;
+    right: 20vh;
+    display: inline-block;
     padding-top: 10px;
     padding-bottom: 10px;
     padding-left: 30px;
@@ -365,6 +374,8 @@ nav {
 }
 
 .post-item-title {
+  font-family: $fjalla !important;
+  text-transform: uppercase !important;
   position: absolute;
   text-align: center;
   padding: 10px 10px 20px 10px;

@@ -9,8 +9,8 @@ $(document).ready(function(){
         slidesToShow: 1,
         slidesToScroll: 1,
         speed: 1000,
-        autoplay: true,
-        autoplaySpeed: 4000
+        //autoplay: true,
+        //autoplaySpeed: 4000
     });
 });
 //

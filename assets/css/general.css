@@ -69,7 +69,10 @@ a {
   overflow: hidden;
   width: 100%;
   padding-bottom: 60%;
-  transition: all .4s ease-in-out;
+  transition: all .2s ease-in-out;
+  filter: grayscale(50%);
+  -webkit-filter: grayscale(50%);
+  /* Webkit */
   background-size: cover;
   border-style: solid;
   border-color: #000000;
@@ -78,7 +81,9 @@ a {
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
   .post-image-content:hover {
-    transform: scale(1.2); }
+    filter: grayscale(0%);
+    -webkit-filter: grayscale(0%);
+    /* Webkit */ }
 
 .gallery-center-block {
   background-color: #FFFFFF;
@@ -95,11 +100,15 @@ a {
   position: relative;
   overflow: hidden; }
   .top-main-gallery-item a {
+    font-family: "Fjalla One", sans-serif;
+    text-transform: uppercase;
     background-color: rgba(0, 0, 0, 0.4);
     color: white !important;
     position: absolute;
     bottom: 20vh;
-    left: 20vw;
+    left: 20vh;
+    right: 20vh;
+    display: inline-block;
     padding-top: 10px;
     padding-bottom: 10px;
     padding-left: 30px;
@@ -216,6 +225,8 @@ nav {
   transform: translateX(-50%); }
 
 .post-item-title {
+  font-family: "Fjalla One", sans-serif !important;
+  text-transform: uppercase !important;
   position: absolute;
   text-align: center;
   padding: 10px 10px 20px 10px;
