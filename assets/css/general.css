@@ -11,7 +11,7 @@ a {
   left: 0;
   padding-left: 0px;
   padding-right: 0px;
-  height: 90vh;
+  height: 79vh;
   z-index: 0;
   text-align: center;
   border-style: solid;
@@ -22,7 +22,7 @@ a {
   box-sizing: border-box; }
 
 .header-block {
-  height: 9vh; }
+  height: 19vh; }
 
 .logo {
   width: 100%;
@@ -155,8 +155,9 @@ nav {
   left: 0px; }
 
 .logo-frontpage {
-  height: 7vh;
-  padding-top: 4vh; }
+  height: 20vh;
+  padding-top: 3vh;
+  padding-bottom: 3vh; }
 
 .navbar-header {
   min-height: 150px; }
@@ -167,7 +168,7 @@ nav {
   .top-main-gallery-item-photo:after {
     display: block;
     content: "";
-    padding-bottom: 86vh; }
+    padding-bottom: 75vh; }
 
 .blog_post_item_bg {
   transition: .5s;
