@@ -411,6 +411,7 @@ nav {
 .post-main-img {
   position: relative;
   height: 100vh;
+  max-height: 800px;
   background-position: center;
   background-size: cover;
   z-index: -1;
