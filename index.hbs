@@ -1,55 +1,77 @@
 {{!< default}}
 {{! The tag above means - insert everything in this file into the {body} of the default.hbs template }}
-<div class="center-block header-block">
-    <a href="{{@blog.url}}">
-        <img id="logo_shoe" src="{{asset "images/logo_shoe_black.svg"}}" class="logo-frontpage col-md-offset-1 col-lg-offset-2 col-sm-offset-1 col-xs-offset-0"/>
-    </a>
+<div class="header container">
+    <div class="header-logo">
+        <a href="{{@blog.url}}">
+            <img src="{{asset "images/logo_black.svg"}}"/>
+        </a>
+    </div>
+
+    <div class="header-social">
+        <a href="https://www.facebook.com/veintiochocomacinco">
+            <img src="{{asset "images/facebook.svg"}}" class="social-media-icon"/>
+        </a>
+        <a href="https://www.instagram.com/veintiochocomacinco/">
+            <img src="{{asset "images/instagram.svg"}}" class="social-media-icon"/>
+        </a>
+        <a href="https://www.twitter.com/veintiochocomacinco/">
+            <img src="{{asset "images/twitter.svg"}}" class="social-media-icon"/>
+        </a>
+        <a href="mailto:info@veintiochocomacinco.com">
+            <img src="{{asset "images/mailing.svg"}}" class="social-media-icon"/>
+        </a>
+    </div>
 </div>
 
-<div class="center-block gallery-center-block">
-    <section class="top-main-gallery col-xs-12 col-sm-10 col-md-10 col-lg-8 col-xs-offset-0 col-sm-offset-1 col-md-offset-1 col-lg-offset-2" data-type="gallery" data-speed="4">
+<div class="container">
+    <section class="top-main-gallery" data-type="gallery" data-speed="4">
         {{#foreach posts}}
             {{#if image}}
-            <div class="top-main-gallery-item" href={{url}}>
-                <div class="top-main-gallery-item-photo" style="background-image: url({{image}})">
-
+                <div class="top-main-gallery-item" href={{url}}>
+                    <div class="top-main-gallery-item-photo" style="background-image: url({{image}})"></div>
+                    <div class="top-main-gallery-item-title">
+                        <a href="{{url}}">
+                            <h2>{{title}}</h2>
+                        </a>
+                    </div>
                 </div>
-                <a class="h2" href="{{url}}">
-                    {{title}}
-                </a>
-            </div>
             {{/if}}
         {{/foreach}}
     </section>
-</div>
-<section id="grid" class="grid" role="document">
-    <div class="center-block post-center-block">
+
+    <section>
         <div class="row">
-        {{#foreach posts from="1" to="2"}}
-            <div class="grid-item col-xs-10 col-sm-5 col-md-5 col-lg-4 col-xs-offset-1 {{#if @first}} col-sm-offset-1 col-md-offset-1 col-lg-offset-2 {{else}} col-sm-offset-0 col-md-offset-0 col-lg-offset-0 {{/if}}">
-                <a href="{{url}}">
-                    <div class="post-image">
-                        <div class="post-image-content" style="background-image: url({{image}})"></div>
-                    </div>
-                    <!--<img src="{{image}}" class="img-responsive"/>-->
-                    <div class="post-item-title h4">{{title}}</div>
-                </a>
-            </div>
-        {{/foreach}}
-        </div>
-        <div class="row">
-            {{#foreach posts from="3" to="5"}}
-                <div class="grid-item col-xs-10 col-333 col-222 col-sm-3 col-md-3 col-lg-3 col-xs-offset-1 {{#if @first}} col-sm-offset-1 col-md-offset-1 col-lg-offset-2 {{else}} col-sm-offset-0 col-md-offset-0 col-lg-offset-0 {{/if}}">
+            {{#foreach posts from="1" to="2"}}
+                <div class="col-md-6 trail-2">
                     <a href="{{url}}">
                         <div class="post-image">
                             <div class="post-image-content" style="background-image: url({{image}})"></div>
                         </div>
-                        <!--<img src="{{image}}" class="img-responsive"/>-->
-                        <div class="post-item-title h4">{{title}}</div>
+                        <div class="post-item-title">
+                            <h4>{{title}}</h4>
+                        </div>
                     </a>
                 </div>
             {{/foreach}}
         </div>
+
+        <div class="row">
+            {{#foreach posts from="3" to="5"}}
+                <div class="col-md-4 trail-2">
+                    <a href="{{url}}">
+                        <div class="post-image">
+                            <div class="post-image-content" style="background-image: url({{image}})"></div>
+                        </div>
+                        <div class="post-item-title">
+                            <h4>{{title}}</h4>
+                        </div>
+                    </a>
+                </div>
+            {{/foreach}}
+        </div>
+    </section>
+
+    <section>
         {{pagination}}
-    </div>
-</section>
+    </section>
+</div>
