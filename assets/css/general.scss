@@ -70,6 +70,46 @@ a {
   }
 }
 
+.footer {
+  display: flex;
+  height: 240px;
+  align-items: center;
+  background-color: black;
+
+  &-container {
+    background-color: black;
+  }
+  &-left {
+    flex: 1;
+    display: block;
+    text-align: center;
+    &-logo {
+      img {
+        max-width: 95%;
+        @media(min-width: 768px) {
+          max-width: 50%;
+        }
+        height: auto;
+        max-height: 130px;
+      }
+    }
+    &-social {
+    }
+    &-links {
+      margin-top: 30px;
+      a {
+        padding-left: 30px;
+        padding-right: 30px;
+        color: white !important;
+      }
+    }
+  }
+  &-right {
+    flex: 1;
+  }
+}
+
+
 .nav-fixed {
   position: fixed;
   left: 10px;
@@ -136,6 +176,7 @@ a {
     }
   }
 }
+
 
 .header-block {
   height: 19vh;

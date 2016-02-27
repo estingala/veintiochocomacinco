@@ -43,6 +43,13 @@
 
     {{! Ghost outputs important style and meta data with this tag }}
     {{ghost_head}}
+    <!-- Begin Cookie Consent plugin by Silktide - http://silktide.com/cookieconsent -->
+    <script type="text/javascript">
+        window.cookieconsent_options = {"message":"Utilizamos cookies propias y de terceros para mejorar tu experiencia de usuario","dismiss":"Aceptar","learnMore":"Más información","link":null,"theme":"dark-bottom"};
+    </script>
+
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/1.0.9/cookieconsent.min.js"></script>
+    <!-- End Cookie Consent plugin -->
 </head>
 <body>
 {{{body}}}
@@ -51,6 +58,9 @@
     <script type="text/javascript" src="{{asset "js/bootstrap.min.js"}}"></script>
     <script type="text/javascript" src={{asset "slick/slick.min.js"}}></script>
     <script type="text/javascript" src={{asset "js/gallery.js"}}></script>
+
+
+
     {{! The main JavaScript file for Bootstrap Skeleton }}
     {{> analytics}}
 </footer>
