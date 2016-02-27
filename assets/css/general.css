@@ -87,6 +87,15 @@ a {
   .footer-right {
     flex: 1; }
 
+.pagination {
+  display: flex;
+  vertical-align: middle;
+  text-align: center; }
+  .pagination span {
+    flex: 1; }
+  .pagination a {
+    flex: 1; }
+
 .nav-fixed {
   position: fixed;
   left: 10px;

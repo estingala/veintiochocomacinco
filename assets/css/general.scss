@@ -109,6 +109,18 @@ a {
   }
 }
 
+.pagination {
+  display: flex;
+  vertical-align: middle;
+  text-align: center;
+  span {
+    flex: 1;
+  }
+  a {
+    flex: 1;
+  }
+}
+
 
 .nav-fixed {
   position: fixed;
