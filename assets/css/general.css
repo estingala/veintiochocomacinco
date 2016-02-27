@@ -276,7 +276,9 @@ nav {
   text-transform: uppercase;
   position: absolute;
   left: 0;
-  bottom: 20px;
+  top: 80vh;
+  margin-left: 40px;
+  margin-right: 40px;
   right: 0px;
   color: black;
   text-align: center; }
