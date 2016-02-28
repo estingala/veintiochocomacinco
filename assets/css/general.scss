@@ -9,7 +9,6 @@ $fjalla: 'Fjalla One', sans-serif;
 $navbar-large-size: 150px;
 $navbar-small-size: 70px;
 
-
 $header-height: 15vh;
 $header-margin: 4vh;
 
@@ -121,7 +120,6 @@ a {
   }
 }
 
-
 .nav-fixed {
   position: absolute;
   left: 10px;
@@ -196,7 +194,6 @@ a {
     }
   }
 }
-
 
 .header-block {
   height: 19vh;
@@ -356,12 +353,27 @@ nav {
   text-transform: uppercase;
   position: absolute;
   left: 0;
-  top: 80vh;
+  top: 70vh;
   margin-left: 40px;
   margin-right: 40px;
   right: 0px;
   color: $text-color;
   text-align: center;
+  bottom: 20%;
+
+  h1 {
+    font-family: $fjalla;
+    text-transform: uppercase;
+    background-color: $inv-highlight-bg-color;
+    color: $inv-text-color !important;
+    display: inline-block;
+    z-index: 300;
+    margin: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
 }
 
 .header-bg {
