@@ -62,7 +62,7 @@ a {
 
 .footer {
   display: flex;
-  height: 240px;
+  height: 280px;
   align-items: center;
   background-color: black; }
   .footer-container {
@@ -79,11 +79,21 @@ a {
         .footer-left-logo img {
           max-width: 50%; } }
     .footer-left-links {
-      margin-top: 30px; }
+      display: flex;
+      margin-top: 30px;
+      overflow: auto;
+      flex-wrap: wrap; }
       .footer-left-links a {
         padding-left: 30px;
         padding-right: 30px;
+        padding-bottom: 20px;
         color: white !important; }
+      .footer-left-links-about {
+        flex: 1; }
+      .footer-left-links-contact {
+        flex: 1; }
+      .footer-left-links-privacy {
+        flex: 1; }
   .footer-right {
     flex: 1; }
 
@@ -152,7 +162,8 @@ a {
       .top-main-gallery-item-photo:after {
         display: block;
         content: "";
-        height: 85vh; }
+        height: 85vh;
+        max-height: 800px; }
 
 .header-block {
   height: 19vh; }
@@ -276,13 +287,12 @@ nav {
   text-transform: uppercase;
   position: absolute;
   left: 0;
-  top: 70vh;
+  bottom: 200px;
   margin-left: 40px;
   margin-right: 40px;
   right: 0px;
   color: black;
-  text-align: center;
-  bottom: 20%; }
+  text-align: center; }
   .post-header h1 {
     font-family: "Fjalla One", sans-serif;
     text-transform: uppercase;

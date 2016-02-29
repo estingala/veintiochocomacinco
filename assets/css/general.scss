@@ -71,7 +71,7 @@ a {
 
 .footer {
   display: flex;
-  height: 240px;
+  height: 280px;
   align-items: center;
   background-color: black;
 
@@ -95,11 +95,24 @@ a {
     &-social {
     }
     &-links {
+      display: flex;
       margin-top: 30px;
+      overflow: auto;
+      flex-wrap: wrap;
       a {
         padding-left: 30px;
         padding-right: 30px;
+        padding-bottom: 20px;
         color: white !important;
+      }
+      &-about {
+        flex: 1;
+      }
+      &-contact {
+        flex: 1;
+      }
+      &-privacy {
+        flex: 1;
       }
     }
   }
@@ -190,6 +203,7 @@ a {
         display: block;
         content: "";
         height: 100vh - $header-height;
+        max-height: 800px;
       }
     }
   }
@@ -353,13 +367,12 @@ nav {
   text-transform: uppercase;
   position: absolute;
   left: 0;
-  top: 70vh;
+  bottom: 200px;
   margin-left: 40px;
   margin-right: 40px;
   right: 0px;
   color: $text-color;
   text-align: center;
-  bottom: 20%;
 
   h1 {
     font-family: $fjalla;

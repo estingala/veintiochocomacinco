@@ -83,9 +83,9 @@ $(document).ready(function(){
 
             // background position
             var coords = yPos + 'px';
-
             // move the background
             $scroll.css({ top: coords });
+            document.getElementById("post-header-title").style.marginBottom = coords;
         }); // end window scroll
     });  // end section function
 }); // close out script
