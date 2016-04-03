@@ -27,6 +27,20 @@
     <section class="top-main-gallery" data-type="gallery" data-speed="4">
         {{#foreach posts}}
             {{#if image}}
+                {{#if featured}}
+                    <div class="top-main-gallery-item" href={{url}}>
+                        <div class="top-main-gallery-item-photo" style="background-image: url({{image}})"></div>
+                        <div class="top-main-gallery-item-title">
+                            <a href="{{url}}">
+                                <h2>{{title}}</h2>
+                            </a>
+                        </div>
+                    </div>
+                {{/if}}
+            {{/if}}
+        {{/foreach}}
+        {{#foreach posts limit="4"}}
+            {{#if image}}
                 <div class="top-main-gallery-item" href={{url}}>
                     <div class="top-main-gallery-item-photo" style="background-image: url({{image}})"></div>
                     <div class="top-main-gallery-item-title">
