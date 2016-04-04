@@ -18,7 +18,7 @@ body {
 
 a {
   color: $highlight-color !important;
-  text-decoration: none !important;
+  #text-decoration: none !important;
 }
 
 @mixin trail($i) {
@@ -414,6 +414,9 @@ nav {
   font-family: Lato, sans-serif;
   font-size: 18px;
   text-align: justify;
+  a {
+    text-decoration: underline;
+  }
 }
 
 .post-content img {

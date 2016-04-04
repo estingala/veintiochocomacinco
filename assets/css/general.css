@@ -3,7 +3,7 @@ body {
 
 a {
   color: #000000 !important;
-  text-decoration: none !important; }
+  #text-decoration: none !important; }
 
 .trail-1 {
   margin-bottom: 15px; }
@@ -328,6 +328,8 @@ nav {
   font-family: Lato, sans-serif;
   font-size: 18px;
   text-align: justify; }
+  .post-content a {
+    text-decoration: underline; }
 
 .post-content img {
   display: block;
