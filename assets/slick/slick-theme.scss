@@ -104,6 +104,8 @@ $slick-opacity-not-active: 1 !default;
         left: 25px;
         right: -25px;
     }
+    width: 40px;
+    height: 40px;
     &:before {
         content: $slick-prev-character;
         [dir="rtl"] & {
@@ -119,6 +121,8 @@ $slick-opacity-not-active: 1 !default;
         left: 25px;
         right: auto;
     }
+    width: 40px;
+    height: 40px;
     &:before {
         content: $slick-next-character;
         [dir="rtl"] & {

@@ -56,6 +56,8 @@
 
 .slick-prev {
   left: 25px;
+  width: 40px;
+  height: 40px;
   z-index: 200; }
   [dir="rtl"] .slick-prev {
     left: 25px;
@@ -66,7 +68,9 @@
       content: "▶︎"; }
 
 .slick-next {
-  right: 25px; }
+  right: 25px;
+  width: 40px;
+  height: 40px; }
   [dir="rtl"] .slick-next {
     left: 25px;
     right: auto; }
