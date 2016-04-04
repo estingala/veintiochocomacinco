@@ -213,6 +213,8 @@ a {
   -webkit-filter: grayscale(50%);
   /* Webkit */
   background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
   border: 3px solid #000000;
   box-sizing: border-box; }
   .post-image-content:hover {
